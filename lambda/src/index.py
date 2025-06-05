@@ -9,6 +9,17 @@ BUCKET_NAME = os.environ.get("BUCKET_NAME", "your-default-bucket")
 def main_handler(event, context):
     sc = os.getenv("TEST")
     file = open(sc)
+
+    sc2 = os.environ["test"]
+    file2 = open(sc2)
+
+    sc3 = os.environ.get("test")
+    file3 = open(sc3)
+
+    db = {"Helo": "Word"}
+
+    print(db["Helo"])
+
     # Sample file content
     content = "Hello from Lambda at {}".format(datetime.utcnow().isoformat())
 

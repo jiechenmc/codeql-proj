@@ -1,0 +1,16 @@
+[2025-06-04 21:47:09] This is codeql database index-files --include-extension=.yaml --include-extension=.yml --size-limit=5m --language yaml -- /home/admin/codeql-proj/db
+[2025-06-04 21:47:09] Log file was started late.
+[2025-06-04 21:47:09] Using index-files script /home/admin/codeql-proj/codeql/yaml/tools/index-files.sh.
+[2025-06-04 21:47:09] [PROGRESS] database index-files> Scanning for files in /home/admin/codeql-proj/lambda...
+[2025-06-04 21:47:09] Calling plumbing command: codeql resolve files --include-extension=.yaml --include-extension=.yml --size-limit=5m /home/admin/codeql-proj/lambda --format=json
+[2025-06-04 21:47:09] [PROGRESS] resolve files> Scanning /home/admin/codeql-proj/lambda...
+[2025-06-04 21:47:09] [PROGRESS] resolve files> Scanning /home/admin/codeql-proj/lambda/src...
+[2025-06-04 21:47:09] Plumbing command codeql resolve files completed:
+                      [
+                        "/home/admin/codeql-proj/lambda/serverless.yml"
+                      ]
+[2025-06-04 21:47:09] [DETAILS] database index-files> Found 1 files.
+[2025-06-04 21:47:09] [PROGRESS] database index-files> /home/admin/codeql-proj/db: Indexing files in in /home/admin/codeql-proj/lambda...
+[2025-06-04 21:47:09] Using index-files script /home/admin/codeql-proj/codeql/yaml/tools/index-files.sh.
+[2025-06-04 21:47:09] [PROGRESS] database index-files> Running command in /home/admin/codeql-proj/lambda: [/home/admin/codeql-proj/codeql/yaml/tools/index-files.sh, /home/admin/codeql-proj/db/working/files-to-index13436683863726914734.list]
+[2025-06-04 21:47:09] Terminating normally.

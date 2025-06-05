@@ -1,0 +1,11 @@
+[2025-06-04 21:54:58] This is codeql query run codeql-custom-queries-python/q2.ql --database ./db
+[2025-06-04 21:54:58] Log file was started late.
+[2025-06-04 21:54:58] Calling plumbing command: codeql resolve ram --dataset=/home/admin/codeql-proj/db/db-python --format=json
+[2025-06-04 21:54:58] [PROGRESS] resolve ram> Stringpool size measured as 2154906
+[2025-06-04 21:54:58] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1800M",
+                        "--off-heap-ram=1302"
+                      ]
+[2025-06-04 21:54:58] Chaining via /tmp/codeql.mPUOYe9H to plumbing: execute queries -J-Xmx1800M --off-heap-ram=1302 --verbosity=progress --logdir=/home/admin/codeql-proj/db/log --evaluator-log-level=5 --warnings=show --qlconfig-file=/home/admin/codeql-proj/qlconfig.yml --dynamic-join-order-mode=none -- /home/admin/codeql-proj/db/db-python path:/home/admin/codeql-proj/codeql-custom-queries-python/q2.ql
+[2025-06-04 21:54:58] Exiting with code 70

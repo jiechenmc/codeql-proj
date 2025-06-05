@@ -14,7 +14,7 @@ import semmle.python.dataflow.new.RemoteFlowSources
 import semmle.python.ApiGraphs
 import semmle.python.Concepts
 
-module RemoteToFileConfiguration implements DataFlow::ConfigSig {
+module EnvToFileConfiguration implements DataFlow::ConfigSig {
   predicate isSource(DataFlow::Node source) {
     source = API::moduleImport("os").getMember("getenv").getACall()
   }
@@ -22,8 +22,8 @@ module RemoteToFileConfiguration implements DataFlow::ConfigSig {
   predicate isSink(DataFlow::Node sink) { sink = any(FileSystemAccess fa).getAPathArgument() }
 }
 
-module RemoteToFileFlow = TaintTracking::Global<RemoteToFileConfiguration>;
+module EnvToFileFlow = TaintTracking::Global<EnvToFileConfiguration>;
 
 from DataFlow::Node input, DataFlow::Node fileAccess
-where RemoteToFileFlow::flow(input, fileAccess)
+where EnvToFileFlow::flow(input, fileAccess)
 select fileAccess, "This file access uses data from $@.", input, "user-controllable input."

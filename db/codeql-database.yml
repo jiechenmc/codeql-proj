@@ -1,0 +1,10 @@
+---
+sourceLocationPrefix: /home/admin/codeql-proj/lambda
+baselineLinesOfCode: 22
+unicodeNewlines: false
+columnKind: utf32
+primaryLanguage: python
+creationMetadata:
+  cliVersion: 2.21.4
+  creationTime: 2025-06-05T00:30:21.933455486Z
+finalised: true

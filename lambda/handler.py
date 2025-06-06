@@ -16,6 +16,10 @@ print(response.data)
 
 s3 = boto3.resource("s3")
 
+boto3.put("s3")
+
+s3.put_object("SOMETHING")
+
 
 def hello(event, context):
     body = {

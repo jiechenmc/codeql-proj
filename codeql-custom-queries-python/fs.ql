@@ -1,7 +1,7 @@
 /**
  * This is an automatically generated file
  *
- * @name Hello world
+ * @name AWS Lambda
  * @kind problem
  * @problem.severity warning
  * @id python/example/hello-world
@@ -13,6 +13,7 @@ import semmle.python.dataflow.new.TaintTracking
 import semmle.python.dataflow.new.RemoteFlowSources
 import semmle.python.ApiGraphs
 import semmle.python.Concepts
+import semmle.python.dataflow.new.RemoteFlowSources
 
 // string lambda_handler_name = "hello"; // default value
 

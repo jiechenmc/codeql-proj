@@ -1,10 +1,7 @@
 import python
+import semmle.python.dataflow.new.RemoteFlowSources
 
-from Subscript subscript, Expr idx
-where
-  subscript.getValue() instanceof Attribute and
-  subscript.getValue().(Attribute).getAttr() = "environ" and
-  subscript.getValue().(Attribute).getValue() instanceof Name and
-  subscript.getValue().(Attribute).getValue().(Name).getId() = "os" and
-  idx = subscript.getIndex()
-select subscript.getValue(), "Access to os.environ with key: " + idx
+// select any(RemoteFlowSource rfs) // select any RemoteFlowSource appearance
+
+from Call call
+select call.getFunc().(Name).getId(), "Found a call to put_item"

@@ -16,3 +16,12 @@ extensions:
           "Member[operations].Member[sudo].Argument[0]",
           "command-injection",
         ]
+  - addsTo:
+      pack: codeql/python-all
+      extensible: sourceModel
+    data:
+      - [
+          "django.db.models.FileField!",
+          "Call.Argument[0,upload_to:].Parameter[1]",
+          "remote",
+        ]

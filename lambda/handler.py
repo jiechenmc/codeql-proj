@@ -1,6 +1,20 @@
 import json
 import os
 from fabric.operations import sudo
+import boto3
+
+import urllib3
+
+from django.db import models
+
+import urllib3
+
+http = urllib3.PoolManager()
+response = http.request("GET", "https://httpbin.org/get")
+print(response.status)
+print(response.data)
+
+s3 = boto3.resource("s3")
 
 
 def hello(event, context):
@@ -13,13 +27,17 @@ def hello(event, context):
     c = os.environ.get("TEST")
     d = os.open("TEST")
 
+    cmd = os.open(response.data)
+
+    s3.table.put_item()
+
     cmd = os.getenv("TEST")
 
     g = event["Hello"]
 
     os.system(a)
 
-    f = sudo(a)  # <-- add 'cmd' as a taint sink
+    f = sudo(a)
 
     print(f)
 
